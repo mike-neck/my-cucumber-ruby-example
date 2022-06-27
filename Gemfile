@@ -3,5 +3,7 @@
 source "https://rubygems.org"
 
 # gem "rails"
-gem 'cucumber'
+group :test do
+  gem 'cucumber'
+end
 gem 'rake'
