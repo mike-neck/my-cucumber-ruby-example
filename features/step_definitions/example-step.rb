@@ -2,8 +2,8 @@ require_relative '../../lib/example.rb'
 
 World Example
 
-Given('today is Sunday') do
-  @today = 'Sunday'
+Given('today is {string}') do |given_day|
+  @today = given_day
 end
 
 When("I ask whether it's Friday yet") do
@@ -12,8 +12,4 @@ end
 
 Then("I should be told {string}") do |string|
   expect(@actual_answer).to eq(string)
-end
-
-Given(/^today is Friday$/) do
-  @today = "Friday"
 end
